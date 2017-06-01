@@ -1,0 +1,38 @@
+<div class="Game" [style.width.px]="width" [style.height.px]="height" [style.margin-top.px]="0">
+  <div *ngFor="let row of gameMap; let rowIndex = index">
+    <dot *ngFor="let d of row; let colIndex = index"
+         [left]="getLeft(colIndex)"
+         [top]="getTop(rowIndex)"
+         [dotWidth]="dotWidth"
+         [row]="rowIndex"
+         [column]="colIndex"
+         [type]="(d === 2 ? 1 : d)"></dot>
+  </div>
+
+  <dot
+    *ngIf="showChild"
+    [isMonkey]="true"
+    [direction]="direction"
+    [type]="2"
+    [row]="monkeyY"
+    [column]="monkeyX"
+    [left]="getLeft(monkeyX)"
+    [top]="getTop(monkeyY)"
+    [dotWidth]="dotWidth"></dot>
+
+  <direction
+    [direction]="direction"
+    [left]="getLeft(monkeyX)"
+    [top]="getTop(monkeyY)"
+    [dotWidth]="dotWidth"></direction>
+</div>
+
+<!--<div *ngIf="gameState === 'wait'" class="GameStart"-->
+     <!--[style.width.px]="width" [style.height.px]="height">-->
+  <!--<button ion-button (click)="handleClickStart()"> Start </button>-->
+<!--</div>-->
+
+<!--<div *ngIf="gameState === 'after'" class="GameEnd"-->
+     <!--[style.width.px]="width" [style.height.px]="height">-->
+  <!--Game Finished. [{{gameStateCause}}]-->
+<!--</div>-->

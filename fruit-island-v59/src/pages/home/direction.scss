@@ -1,0 +1,10 @@
+.direction {
+  position: absolute;
+
+  transition: all 1s;
+
+  &-image {
+    right: 0;
+    position: absolute;
+  }
+}

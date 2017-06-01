@@ -1,0 +1,18 @@
+<div
+  (touchstart)="handleTouchDot()"
+  *ngIf="!isMonkey && type < 3"
+  [class]="dotClass"
+  [style.top.px]="top"
+  [style.left.px]="left"
+  [style.width.px]="dotWidth"
+  [style.height.px]="dotWidth"></div>
+
+<img
+  (touchstart)="handleTouchDot()"
+  *ngIf="isMonkey || type > 2"
+  [src]="imageSrc"
+  [class]="dotClass"
+  [style.top.px]="top"
+  [style.left.px]="left"
+  [style.width.px]="dotWidth"
+  [style.height.px]="dotWidth" />

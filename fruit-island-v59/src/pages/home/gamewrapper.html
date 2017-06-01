@@ -1,0 +1,7 @@
+<div (press)="handlePress($event)"  [style.margin-top.px]="0">
+  <game *ngIf="phase === 'wait' || phase === 'listen'" [gameMap]="gameMaps[stage-1]" [width]="width" [height]="height"></game>
+
+  <div *ngIf="phase === 'end'"  [style.margin-top.px]="0">
+    <img [src]="'assets/images/'+result+'.jpg'" [style.margin-top.px]="0"> <!-- [style.width.px]="height" [style.height.px]="width" /> -->
+  </div>
+</div>

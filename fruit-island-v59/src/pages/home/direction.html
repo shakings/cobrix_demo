@@ -1,0 +1,13 @@
+<div class="direction"
+     [style.width.px]="dirWidth"
+     [style.height.px]="dirWidth"
+     [style.top.px]="top-margin"
+     [style.transform]="'rotate('+(direction-1)*90+'deg)'"
+     [style.left.px]="left-margin">
+  <img
+    class="direction-image"
+    [style.width.px]="dirImageWidth"
+    [style.height.px]="dirImageHeight"
+    [style.top.px]="dirWidth/2-dirImageHeight/2"
+    src="assets/images/direction@3x.png" />
+</div>

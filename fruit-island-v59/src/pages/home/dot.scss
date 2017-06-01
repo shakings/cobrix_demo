@@ -1,0 +1,20 @@
+.dot.empty {
+  border-radius: 40px;
+  box-shadow: 0px 0px 0px 6px white inset;
+}
+
+.dot.filled {
+  border-radius: 40px;
+  box-shadow: 0px 0px 0px 6px black inset;
+  background-color: white;
+}
+
+.dot {
+  background-color: transparent;
+  position: absolute;
+}
+
+.dot.monkey {
+  transition: all 1s;
+  z-index: 100;
+}
